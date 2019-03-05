@@ -13,10 +13,26 @@ final class InlinableTestTests: XCTestCase {
         }
     }
 
+    func testInlined2() {
+        let myStruct = MyStruct.init(ranges: ranges)
+        measure {
+            let myRanges = myStruct.inlinedRanges2("")
+            XCTAssertEqual(myRanges.count, counts)
+        }
+    }
+
     func testNotInlined() {
         let myStruct = MyStruct.init(ranges: ranges)
         measure {
             let myRanges = myStruct.ranges("")
+            XCTAssertEqual(myRanges.count, counts)
+        }
+    }
+
+    func testNotInlined2() {
+        let myStruct = MyStruct.init(ranges: ranges)
+        measure {
+            let myRanges = myStruct.ranges2("")
             XCTAssertEqual(myRanges.count, counts)
         }
     }

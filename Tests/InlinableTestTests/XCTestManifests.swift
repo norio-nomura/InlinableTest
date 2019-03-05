@@ -7,7 +7,9 @@ extension InlinableTestTests {
     // to regenerate.
     static let __allTests__InlinableTestTests = [
         ("testInlined", testInlined),
+        ("testInlined2", testInlined2),
         ("testNotInlined", testNotInlined),
+        ("testNotInlined2", testNotInlined2),
     ]
 }
 
